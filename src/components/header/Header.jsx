@@ -102,7 +102,7 @@ export default function Header() {
                 style={{ fontFamily: "Noto Sans Devanagari, serif" }}
                 whileHover={{ scale: 1.05 }}
               >
-                शायरी संगम
+                Hindi Shayari
               </motion.h1>
               <span className="text-xs text-gray-600">Shayari Sangam</span>
             </div>

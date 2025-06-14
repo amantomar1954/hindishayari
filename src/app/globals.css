@@ -3,11 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --font-devanagari: "Noto Sans Devanagari", serif;
+  /* Font families */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Noto Sans Devanagari", serif;
+
+  /* Colors - Amazon Prime Inspired */
+  --color-bg: #0f1111; /* Dark background */
+  --color-text: #ffffff; /* White text */
+  --color-accent: #00a8e1; /* Amazon Prime Blue */
+  --color-accent-dark: #007185; /* Darker accent shade */
+  --color-scrollbar-track: #1a1a1a;
+  --color-scrollbar-thumb: linear-gradient(to bottom, var(--color-accent), var(--color-accent-dark));
+  --color-scrollbar-thumb-hover: linear-gradient(to bottom, #00b8ff, #006f8c);
+
+  /* Spacing */
+  --border-radius: 6px;
+  --scrollbar-width: 10px;
 }
 
 body {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-primary);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 .line-clamp-2 {
@@ -19,20 +36,20 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #f97316, #dc2626);
-  border-radius: 4px;
+  background: var(--color-scrollbar-thumb);
+  border-radius: var(--border-radius);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #ea580c, #b91c1c);
+  background: var(--color-scrollbar-thumb-hover);
 }
 
 /* Smooth animations */
@@ -42,6 +59,6 @@ body {
 
 /* Hindi/Urdu text styling */
 .devanagari-text {
-  font-family: var(--font-devanagari);
+  font-family: var(--font-secondary);
   line-height: 1.8;
 }
